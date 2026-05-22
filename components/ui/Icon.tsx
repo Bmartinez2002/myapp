@@ -27,7 +27,7 @@ export const I = {
 
 type IconName = keyof typeof I | "more";
 
-export function Icon({ name, size = 18, stroke = 1.6, ...p }: { name: IconName; size?: number; stroke?: number } & SVGProps<SVGSVGElement>) {
+export function Icon({ name, size = 18, stroke = 1.6, ...p }: { name: IconName; size?: number; stroke?: number } & Omit<SVGProps<SVGSVGElement>, "stroke">) {
   if (name === "more") {
     return (
       <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" stroke="none" {...p}>

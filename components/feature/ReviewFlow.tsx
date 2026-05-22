@@ -99,7 +99,7 @@ export function ReviewFlow({
           </div>
           {word && (
             <div className="mono mt-4" style={{ fontSize: 13, color: "var(--color-accent)" }}>
-              "{word.toUpperCase()}"
+              {`"${word.toUpperCase()}"`}
             </div>
           )}
         </div>
@@ -210,7 +210,7 @@ export function ReviewFlow({
                 protegidos esta semana
               </div>
               <div className="mono mt-4" style={{ fontSize: 11, color: "var(--color-fg-4)" }}>
-                "Los pequeños sí cuentan. Especialmente cuando suman."
+                {`"Los pequeños sí cuentan. Especialmente cuando suman."`}
               </div>
             </div>
           </div>
@@ -307,7 +307,7 @@ export function ReviewFlow({
                 )}
                 {r.reflection && (
                   <div className="mt-1" style={{ fontSize: 12.5, color: "var(--color-fg-2)", fontStyle: "italic" }}>
-                    "{r.reflection}"
+                    {`"${r.reflection}"`}
                   </div>
                 )}
               </div>

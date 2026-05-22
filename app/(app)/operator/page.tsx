@@ -136,7 +136,7 @@ export default async function OperatorPage() {
         {habitsWithStreak.filter(h => h.streak > 0).slice(0, 2).map(h => (
           <Pill key={h.name} kind="blue">{h.name.split(" ")[0].toUpperCase()} {h.streak}D</Pill>
         ))}
-        {nextDebt && <Pill kind="amber">VENCE {nextDebt.due ?? "pronto"}</Pill>}
+        {nextDebt && <Pill kind="amber">VENCE {nextDebt.due_at ?? "pronto"}</Pill>}
       </div>
 
       {/* ─ Chat ───────────────────────────────────────────────── */}

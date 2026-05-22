@@ -2,11 +2,10 @@ import { stability, StabilityInput } from "@/lib/stability";
 import { localDay, TZ } from "@/lib/dates";
 import { toZonedTime, fromZonedTime } from "date-fns-tz";
 import { startOfMonth, subDays } from "date-fns";
-import type { SupabaseClient } from "@supabase/supabase-js";
 
 export async function recomputeSnapshot(
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  sb: SupabaseClient<any>,
+  // biome-ignore lint: supabase client can be any schema variant
+  sb: any,
   userId: string,
 ): Promise<{ score: number; pillars: { capital: number; discipline: number; antifuga: number } }> {
   const now       = new Date();

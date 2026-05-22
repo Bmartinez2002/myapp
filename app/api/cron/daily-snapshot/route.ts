@@ -54,7 +54,7 @@ export async function GET(req: Request) {
     const habitCount  = habits?.length ?? 0;
     const slots14     = habitCount * 14;
     const hits14      = hitRows?.length ?? 0;
-    const habitRate14d = slots14 > 0 ? hits14 / slots14 : 0;
+    const habitHitRate14d = slots14 > 0 ? hits14 / slots14 : 0;
 
     // streak depth: log-normalized total hits across all habits last 14d
     const streakDepthScore = Math.min(1, Math.log10(1 + hits14) / 1.7);

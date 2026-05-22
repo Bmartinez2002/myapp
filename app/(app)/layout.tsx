@@ -57,7 +57,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
   );
 }
 
-function RailLink({ href, icon, label }: { href: string; icon: Parameters<typeof Icon>[0]["name"]; label: string }) {
+function RailLink({ href, icon, label }: { href: React.ComponentProps<typeof Link>["href"]; icon: Parameters<typeof Icon>[0]["name"]; label: string }) {
   return (
     <Link href={href} className="flex items-center gap-2.5 px-2.5 py-2 rounded-[7px] text-[13px] text-fg-2 hover:bg-bg-1">
       <Icon name={icon} size={16}/>

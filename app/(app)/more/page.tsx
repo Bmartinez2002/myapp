@@ -5,12 +5,12 @@ import { Card } from "@/components/ui/Card";
 export const dynamic = "force-dynamic";
 
 const items = [
-  { href: "/today",    icon: "pulse"  as const, label: "Today",         sub: "Feed cronológico del día",   color: "var(--color-accent)" },
-  { href: "/anti-fuga",icon: "shield" as const, label: "Anti-fuga",     sub: "Índice de fuga · categorías",color: "var(--color-warn)" },
-  { href: "/ceo",      icon: "brief"  as const, label: "CEO Mode",      sub: "Proyectos · pipeline",       color: "var(--color-accent-2)" },
-  { href: "/review",   icon: "cal"    as const, label: "Weekly Review", sub: "Cierre semanal · 6 pasos",   color: "var(--color-accent-2)" },
-  { href: "/operator", icon: "ai"     as const, label: "AI Operator",   sub: "Chat con tu operador IA",    color: "var(--color-accent)" },
-  { href: "/settings", icon: "cog"    as const, label: "Settings",      sub: "Datos · perfil · export",    color: "var(--color-fg-3)" },
+  { href: "/today"     as const, icon: "pulse"  as const, label: "Today",         sub: "Feed cronológico del día",    color: "var(--color-accent)" },
+  { href: "/anti-fuga" as const, icon: "shield" as const, label: "Anti-fuga",     sub: "Índice de fuga · categorías", color: "var(--color-warn)" },
+  { href: "/ceo"       as const, icon: "brief"  as const, label: "CEO Mode",      sub: "Proyectos · pipeline",        color: "var(--color-accent-2)" },
+  { href: "/review"    as const, icon: "cal"    as const, label: "Weekly Review", sub: "Cierre semanal · 6 pasos",    color: "var(--color-accent-2)" },
+  { href: "/operator"  as const, icon: "ai"     as const, label: "AI Operator",   sub: "Chat con tu operador IA",     color: "var(--color-accent)" },
+  { href: "/settings"  as const, icon: "cog"    as const, label: "Settings",      sub: "Datos · perfil · export",     color: "var(--color-fg-3)" },
 ];
 
 export default function MorePage() {
@@ -41,7 +41,7 @@ export default function MorePage() {
       {/* Menu items */}
       <div className="flex flex-col gap-2">
         {items.map(it => (
-          <Link key={it.href} href={it.href}>
+          <Link key={it.label} href={it.href}>
             <div className="rounded-card border p-3.5 flex items-center gap-3.5 cursor-pointer"
               style={{background:'oklch(0.18 .007 250)', borderColor:'var(--color-hair)'}}>
               <div className="size-[38px] rounded-[11px] grid place-items-center shrink-0"

@@ -1,0 +1,417 @@
+   ▲ Next.js 15.5.18
+   - Environments: .env.local
+
+   Creating an optimized production build ...
+ ⚠ Compiled with warnings in 7.0s
+
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/lib/is-error.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\lib\is-error.js|pages-dir-node
+    Used by 2 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\pages\_document.js|pages-dir-node
+* javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\lib\is-error.js|pages-dir-node
+    Used by 2 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\pages\_document.js|pages-dir-node
+
+Import trace for requested module:
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/lib/is-error.js
+
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/lib/pretty-bytes.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\lib\pretty-bytes.js|pages-dir-node
+    Used by 1 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\pages\_document.js|pages-dir-node
+* javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\lib\pretty-bytes.js|pages-dir-node
+    Used by 1 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\pages\_document.js|pages-dir-node
+
+Import trace for requested module:
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/lib/pretty-bytes.js
+
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/get-page-files.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\server\get-page-files.js|pages-dir-node
+    Used by 1 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\pages\_document.js|pages-dir-node
+* javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\server\get-page-files.js|pages-dir-node
+    Used by 1 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\pages\_document.js|pages-dir-node
+
+Import trace for requested module:
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/get-page-files.js
+
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/lib/trace/constants.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\server\lib\trace\constants.js|pages-dir-node
+    Used by 2 module(s), i. e.
+    javascript/auto|C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\server\lib\trace\tracer.js|pages-dir-node
+* javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\server\lib\trace\constants.js|pages-dir-node
+    Used by 5 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\server\route-modules\pages\pages-handler.js|pages-dir-node
+
+Import trace for requested module:
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/lib/trace/constants.js
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/lib/trace/tracer.js
+
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/lib/trace/tracer.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\server\lib\trace\tracer.js|pages-dir-node
+    Used by 2 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\pages\_document.js|pages-dir-node
+* javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\server\lib\trace\tracer.js|pages-dir-node
+    Used by 5 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\pages\_document.js|pages-dir-node
+
+Import trace for requested module:
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/lib/trace/tracer.js
+
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/lib/trace/utils.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\server\lib\trace\utils.js|pages-dir-node
+    Used by 1 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\pages\_document.js|pages-dir-node
+* javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\server\lib\trace\utils.js|pages-dir-node
+    Used by 1 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\pages\_document.js|pages-dir-node
+
+Import trace for requested module:
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/lib/trace/utils.js
+
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/utils.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\server\utils.js|pages-dir-node
+    Used by 2 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\pages\_document.js|pages-dir-node
+* javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\server\utils.js|pages-dir-node
+    Used by 2 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\pages\_document.js|pages-dir-node
+
+Import trace for requested module:
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/utils.js
+
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/pages/_app.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\pages\_app.js|pages-dir-node
+    Used by 1 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\pages\_app.js|pages-dir-node
+* javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\pages\_app.js|pages-dir-node
+    Used by 2 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js?kind=PAGES&page=%2F_error&preferredRegion=&absolutePagePath=next%2Fdist%2Fpages%2F_error&absoluteAppPath=next%2Fdist%2Fpages%2F_app&absoluteDocumentPath=next%2Fdist%2Fpages%2F_document&middlewareConfigBase64=e30%3D!|pages-dir-node
+
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/pages/_document.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\pages\_document.js|pages-dir-node
+    Used by 1 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\pages\_document.js|pages-dir-node
+* javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\pages\_document.js|pages-dir-node
+    Used by 2 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js?kind=PAGES&page=%2F_error&preferredRegion=&absolutePagePath=next%2Fdist%2Fpages%2F_error&absoluteAppPath=next%2Fdist%2Fpages%2F_app&absoluteDocumentPath=next%2Fdist%2Fpages%2F_document&middlewareConfigBase64=e30%3D!|pages-dir-node
+
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/constants.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\constants.js|pages-dir-node
+    Used by 3 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\pages\_document.js|pages-dir-node
+* javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\constants.js|pages-dir-node
+    Used by 3 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\pages\_document.js|pages-dir-node
+
+Import trace for requested module:
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/constants.js
+
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/encode-uri-path.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\encode-uri-path.js|pages-dir-node
+    Used by 1 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\pages\_document.js|pages-dir-node
+* javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\encode-uri-path.js|pages-dir-node
+    Used by 1 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\pages\_document.js|pages-dir-node
+
+Import trace for requested module:
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/encode-uri-path.js
+
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/htmlescape.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\htmlescape.js|pages-dir-node
+    Used by 2 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\pages\_document.js|pages-dir-node
+* javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\htmlescape.js|pages-dir-node
+    Used by 2 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\pages\_document.js|pages-dir-node
+
+Import trace for requested module:
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/htmlescape.js
+
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/is-plain-object.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\is-plain-object.js|pages-dir-node
+    Used by 2 module(s), i. e.
+    javascript/auto|C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\lib\is-error.js|pages-dir-node
+* javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\is-plain-object.js|pages-dir-node
+    Used by 2 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\lib\is-error.js|pages-dir-node
+
+Import trace for requested module:
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/is-plain-object.js
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/lib/is-error.js
+
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/is-thenable.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\is-thenable.js|pages-dir-node
+    Used by 1 module(s), i. e.
+    javascript/auto|C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\server\lib\trace\tracer.js|pages-dir-node
+* javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\is-thenable.js|pages-dir-node
+    Used by 1 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\server\lib\trace\tracer.js|pages-dir-node
+
+Import trace for requested module:
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/is-thenable.js
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/lib/trace/tracer.js
+
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/modern-browserslist-target.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\modern-browserslist-target.js|pages-dir-node
+    Used by 2 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\constants.js|pages-dir-node
+* javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\modern-browserslist-target.js|pages-dir-node
+    Used by 2 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\constants.js|pages-dir-node
+
+Import trace for requested module:
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/modern-browserslist-target.js
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/constants.js
+
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/page-path/denormalize-page-path.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\page-path\denormalize-page-path.js|pages-dir-node
+    Used by 1 module(s), i. e.
+    javascript/auto|C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\server\get-page-files.js|pages-dir-node
+* javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\page-path\denormalize-page-path.js|pages-dir-node
+    Used by 1 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\server\get-page-files.js|pages-dir-node
+
+Import trace for requested module:
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/page-path/denormalize-page-path.js
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/get-page-files.js
+
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/page-path/ensure-leading-slash.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\page-path\ensure-leading-slash.js|pages-dir-node
+    Used by 2 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\page-path\normalize-page-path.js|pages-dir-node
+* javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\page-path\ensure-leading-slash.js|pages-dir-node
+    Used by 2 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\page-path\normalize-page-path.js|pages-dir-node
+
+Import trace for requested module:
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/page-path/ensure-leading-slash.js
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/page-path/normalize-page-path.js
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/get-page-files.js
+
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/page-path/normalize-page-path.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\page-path\normalize-page-path.js|pages-dir-node
+    Used by 1 module(s), i. e.
+    javascript/auto|C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\server\get-page-files.js|pages-dir-node
+* javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\page-path\normalize-page-path.js|pages-dir-node
+    Used by 1 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\server\get-page-files.js|pages-dir-node
+
+Import trace for requested module:
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/page-path/normalize-page-path.js
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/get-page-files.js
+
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/page-path/normalize-path-sep.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\page-path\normalize-path-sep.js|pages-dir-node
+    Used by 1 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\page-path\denormalize-page-path.js|pages-dir-node
+* javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\page-path\normalize-path-sep.js|pages-dir-node
+    Used by 1 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\page-path\denormalize-page-path.js|pages-dir-node
+
+Import trace for requested module:
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/page-path/normalize-path-sep.js
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/page-path/denormalize-page-path.js
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/get-page-files.js
+
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/router/utils/app-paths.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\router\utils\app-paths.js|pages-dir-node
+    Used by 2 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\router\utils\interception-routes.js|pages-dir-node
+* javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\router\utils\app-paths.js|pages-dir-node
+    Used by 2 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\router\utils\interception-routes.js|pages-dir-node
+
+Import trace for requested module:
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/router/utils/app-paths.js
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/router/utils/interception-routes.js
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/router/utils/is-dynamic.js
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/router/utils/index.js
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/page-path/denormalize-page-path.js
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/get-page-files.js
+
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/router/utils/index.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\router\utils\index.js|pages-dir-node
+    Used by 3 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\page-path\denormalize-page-path.js|pages-dir-node
+* javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\router\utils\index.js|pages-dir-node
+    Used by 3 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\page-path\denormalize-page-path.js|pages-dir-node
+
+Import trace for requested module:
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/router/utils/index.js
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/page-path/denormalize-page-path.js
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/get-page-files.js
+
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/router/utils/interception-routes.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\router\utils\interception-routes.js|pages-dir-node
+    Used by 2 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\router\utils\is-dynamic.js|pages-dir-node
+* javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\router\utils\interception-routes.js|pages-dir-node
+    Used by 2 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\router\utils\is-dynamic.js|pages-dir-node
+
+Import trace for requested module:
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/router/utils/interception-routes.js
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/router/utils/is-dynamic.js
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/router/utils/index.js
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/page-path/denormalize-page-path.js
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/get-page-files.js
+
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/router/utils/is-dynamic.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\router\utils\is-dynamic.js|pages-dir-node
+    Used by 1 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\router\utils\index.js|pages-dir-node
+* javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\router\utils\is-dynamic.js|pages-dir-node
+    Used by 1 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\router\utils\index.js|pages-dir-node
+
+Import trace for requested module:
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/router/utils/is-dynamic.js
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/router/utils/index.js
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/page-path/denormalize-page-path.js
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/get-page-files.js
+
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/router/utils/sorted-routes.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\router\utils\sorted-routes.js|pages-dir-node
+    Used by 2 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\router\utils\index.js|pages-dir-node
+* javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\router\utils\sorted-routes.js|pages-dir-node
+    Used by 2 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\router\utils\index.js|pages-dir-node
+
+Import trace for requested module:
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/router/utils/sorted-routes.js
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/router/utils/index.js
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/page-path/denormalize-page-path.js
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/get-page-files.js
+
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/segment.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\segment.js|pages-dir-node
+    Used by 2 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\router\utils\app-paths.js|pages-dir-node
+* javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\segment.js|pages-dir-node
+    Used by 2 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\router\utils\app-paths.js|pages-dir-node
+
+Import trace for requested module:
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/segment.js
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/router/utils/app-paths.js
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/router/utils/interception-routes.js
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/router/utils/is-dynamic.js
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/router/utils/index.js
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/page-path/denormalize-page-path.js
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/get-page-files.js
+
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/utils.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\utils.js|pages-dir-node
+    Used by 3 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!C:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\pages\_app.js|pages-dir-node
+* javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\shared\lib\utils.js|pages-dir-node
+    Used by 5 module(s), i. e.
+    javascript/auto|c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[16].oneOf[8].use[0]!c:\Users\HP\Documents\BMG\BMG\Brayan OS\brayan-os\node_modules\.pnpm\next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6\node_modules\next\dist\pages\_app.js|pages-dir-node
+
+Import trace for requested module:
+./node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/shared/lib/utils.js
+
+ ✓ Compiled successfully in 9.8s
+   Linting and checking validity of types ...
+
+./app/layout.tsx
+25:9  Warning: Custom fonts not added in `pages/_document.js` will only load for a single page. This is discouraged. See: https://nextjs.org/docs/messages/no-page-custom-font  @next/next/no-page-custom-font
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules
+Failed to compile.
+
+./app/(app)/layout.tsx:60:50
+Type error: Generic type 'LinkProps' requires 1 type argument(s).
+
+[0m [90m 58 |[39m }
+ [90m 59 |[39m
+[31m[1m>[22m[39m[90m 60 |[39m [36mfunction[39m [33mRailLink[39m({ href[33m,[39m icon[33m,[39m label }[33m:[39m { href[33m:[39m [33mLinkProps[39m[[32m"href"[39m][33m;[39m icon[33m:[39m [33mParameters[39m[33m<[39m[36mtypeof[39m [33mIcon[39m[33m>[39m[[35m0[39m][[32m"name"[39m][33m;[39m label[33m:[39m string }) {
+ [90m    |[39m                                                  [31m[1m^[22m[39m
+ [90m 61 |[39m   [36mreturn[39m (
+ [90m 62 |[39m     [33m<[39m[33mLink[39m href[33m=[39m{href} className[33m=[39m[32m"flex items-center gap-2.5 px-2.5 py-2 rounded-[7px] text-[13px] text-fg-2 hover:bg-bg-1"[39m[33m>[39m
+ [90m 63 |[39m       [33m<[39m[33mIcon[39m name[33m=[39m{icon} size[33m=[39m{[35m16[39m}[33m/[39m[33m>[39m[0m
+Next.js build worker exited with code: 1 and signal: null
