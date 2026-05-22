@@ -94,6 +94,18 @@ export default async function SettingsPage() {
             <span>Mis deudas</span>
             <span style={{ color: "var(--color-fg-4)" }}>→</span>
           </Link>
+          <Link
+            href="/settings/habits"
+            style={{
+              display: "flex", alignItems: "center", justifyContent: "space-between",
+              padding: "11px 12px", borderRadius: 10, fontSize: 13.5, fontWeight: 500,
+              background: "var(--color-bg-1)", border: "1px solid var(--color-hair)",
+              color: "var(--color-fg)", textDecoration: "none",
+            }}
+          >
+            <span>Mis hábitos</span>
+            <span style={{ color: "var(--color-fg-4)" }}>→</span>
+          </Link>
         </div>
       </Card>
 
