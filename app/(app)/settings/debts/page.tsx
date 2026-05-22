@@ -53,7 +53,7 @@ export default async function DebtsPage() {
           • <strong>Saldo</strong>: ingresa el monto actual que debes (en COP).<br/>
           • <strong>Cerrar</strong>: marca la deuda como pagada — sale del cálculo de estabilidad.<br/>
           • La tasa anual y fecha límite son opcionales, para tu referencia.<br/>
-          • Los pagos los registras como gastos con categoría "Pago deuda" en captura.
+          • Los pagos los registras como gastos con categoría &ldquo;Pago deuda&rdquo; en captura.
         </div>
       </Card>
     </div>
