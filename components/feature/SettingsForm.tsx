@@ -72,9 +72,9 @@ export function SettingsForm({ fullName, dailyLimitCents, metaTargetCents }: Pro
         </div>
         <input
           type="range"
-          min={500_000_00}
-          max={10_000_000_00}
-          step={500_000_00}
+          min={5_000_000}
+          max={100_000_000}
+          step={5_000_000}
           value={dailyLimit}
           onChange={e => setDailyLimit(Number(e.target.value))}
           style={sliderStyle}
@@ -97,9 +97,9 @@ export function SettingsForm({ fullName, dailyLimitCents, metaTargetCents }: Pro
         </div>
         <input
           type="range"
-          min={500_000_000_00}
-          max={10_000_000_000_00}
-          step={500_000_000_00}
+          min={500_000_000}
+          max={10_000_000_000}
+          step={500_000_000}
           value={metaTarget}
           onChange={e => setMetaTarget(Number(e.target.value))}
           style={sliderStyle}

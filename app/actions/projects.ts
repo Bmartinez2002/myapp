@@ -44,7 +44,7 @@ export async function updateProjectProgress(id: string, progress: number) {
   revalidatePath("/ceo");
 }
 
-const STAGES = ["lead", "discovery", "proposal", "active", "won"] as const;
+const STAGES = ["lead", "discovery", "proposal", "active", "won", "paused", "lost"] as const;
 
 export async function cycleProjectStage(projectId: string, currentStage: string) {
   const idx = STAGES.indexOf(currentStage as typeof STAGES[number]);

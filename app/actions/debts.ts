@@ -23,6 +23,7 @@ export async function addDebt(input: {
   });
   if (error) throw error;
   revalidatePath("/settings/debts");
+  revalidatePath("/meta");
   revalidatePath("/operator");
 }
 
@@ -47,6 +48,7 @@ export async function updateDebt(id: string, patch: {
   const { error } = await sb.from("debts").update(update).eq("id", id).eq("user_id", user.id);
   if (error) throw error;
   revalidatePath("/settings/debts");
+  revalidatePath("/meta");
   revalidatePath("/operator");
 }
 
@@ -61,6 +63,7 @@ export async function closeDebt(id: string) {
     .eq("user_id", user.id);
   if (error) throw error;
   revalidatePath("/settings/debts");
+  revalidatePath("/meta");
   revalidatePath("/operator");
 }
 
@@ -75,6 +78,8 @@ export async function reopenDebt(id: string) {
     .eq("user_id", user.id);
   if (error) throw error;
   revalidatePath("/settings/debts");
+  revalidatePath("/meta");
+  revalidatePath("/operator");
 }
 
 export async function deleteDebt(id: string) {
@@ -85,5 +90,6 @@ export async function deleteDebt(id: string) {
   const { error } = await sb.from("debts").delete().eq("id", id).eq("user_id", user.id);
   if (error) throw error;
   revalidatePath("/settings/debts");
+  revalidatePath("/meta");
   revalidatePath("/operator");
 }

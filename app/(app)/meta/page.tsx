@@ -40,7 +40,7 @@ export default async function MetaPage() {
       .returns<DebtRow[]>(),
   ]);
 
-  const target = Number(profile?.meta_target_cents ?? 200_000_000_000);
+  const target = Number(profile?.meta_target_cents ?? 2_000_000_000);
   const evs = allEvents ?? [];
 
   // ─ cumulative saved (all-time net: income − expense)

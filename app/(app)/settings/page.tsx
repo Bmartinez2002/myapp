@@ -10,8 +10,8 @@ export default async function SettingsPage() {
   const { data: profile } = await sb.from("profiles").select("*").maybeSingle();
 
   const fullName        = (profile?.full_name as string | null) ?? "";
-  const dailyLimitCents = (profile?.daily_limit_cents as number | null) ?? 200_000_00;
-  const metaTargetCents = (profile?.meta_target_cents as number | null) ?? 2_000_000_000_00;
+  const dailyLimitCents = (profile?.daily_limit_cents as number | null) ?? 20_000_000;
+  const metaTargetCents = (profile?.meta_target_cents as number | null) ?? 2_000_000_000;
 
   return (
     <div className="px-4 md:px-6 py-4 md:py-6 flex flex-col gap-3.5 max-w-2xl mx-auto md:max-w-none">

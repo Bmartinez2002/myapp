@@ -26,7 +26,7 @@ export default async function TodayPage() {
     sb.from("categories").select("id, name, emoji, risk_tier").order("name"),
   ]);
 
-  const dailyLimit = Number(profile?.daily_limit_cents ?? 3300000);
+  const dailyLimit = Number(profile?.daily_limit_cents ?? 20_000_000);
   const evs = eventsRaw ?? [];
   const cats = (catsRaw ?? []) as { id: string; name: string; emoji: string | null; risk_tier: string | null }[];
   const spent     = evs.filter(e => e.kind === "expense").reduce((s, e) => s + Number(e.amount_cents), 0);
