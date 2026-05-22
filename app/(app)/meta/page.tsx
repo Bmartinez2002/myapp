@@ -6,6 +6,7 @@ import { Pill } from "@/components/ui/Pill";
 import { Ring } from "@/components/ui/Ring";
 import { Icon } from "@/components/ui/Icon";
 import { fmtCOP } from "@/lib/money";
+import Link from "next/link";
 
 export const dynamic = "force-dynamic";
 
@@ -187,11 +188,31 @@ export default async function MetaPage() {
       </section>
 
       {/* ─ Deuda activa ────────────────────────────────────────── */}
+      {debts.length === 0 && (
+        <Card>
+          <div className="flex items-center justify-between">
+            <span className="micro">DEUDA ACTIVA</span>
+            <Link href="/settings/debts"
+              className="mono text-[11px] px-2.5 py-1 rounded-[7px] border"
+              style={{color:"var(--color-fg-3)", borderColor:"var(--color-hair)"}}>
+              Gestionar →
+            </Link>
+          </div>
+          <div className="mono text-[13px] text-fg-3 mt-2">Sin deudas activas 🎉</div>
+        </Card>
+      )}
       {debts.length > 0 && (
         <Card>
           <div className="flex items-center justify-between">
             <span className="micro">DEUDA ACTIVA</span>
-            <Pill kind="amber">{debts.length} FUENTES</Pill>
+            <div className="flex items-center gap-2">
+              <Link href="/settings/debts"
+                className="mono text-[11px] px-2.5 py-1 rounded-[7px] border"
+                style={{color:"var(--color-fg-3)", borderColor:"var(--color-hair)"}}>
+                Gestionar →
+              </Link>
+              <Pill kind="amber">{debts.length} FUENTES</Pill>
+            </div>
           </div>
           <div className="mono font-medium mt-1.5" style={{fontSize:24, color:"var(--color-warn)"}}>
             {fmtCOP(totalDebt)}

@@ -3,6 +3,7 @@ import { localDay, addDays, startOfLocalDay } from "@/lib/dates";
 import { Card } from "@/components/ui/Card";
 import { Pill } from "@/components/ui/Pill";
 import { HabitsGrid, type HabitWithStreak } from "@/components/feature/HabitsGrid";
+import Link from "next/link";
 
 export const dynamic = "force-dynamic";
 
@@ -74,7 +75,12 @@ export default async function HabitsPage() {
     return (
       <div className="px-4 py-8 text-center text-fg-3">
         <div className="micro">SIN HÁBITOS</div>
-        <p className="mt-2 text-sm">Ve a Configuración para agregar hábitos.</p>
+        <p className="mt-2 text-sm">Agrega tu primer hábito para empezar.</p>
+        <Link href="/settings/habits"
+          className="inline-block mt-4 px-5 py-2.5 rounded-[10px] text-sm font-semibold"
+          style={{background:"var(--color-accent)", color:"var(--color-bg-0)"}}>
+          Gestionar hábitos →
+        </Link>
       </div>
     );
   }
@@ -89,7 +95,14 @@ export default async function HabitsPage() {
           <div className="micro">STREAKS · DÍA</div>
           <h1 className="text-2xl md:text-3xl font-semibold tracking-tight mt-1">Disciplina</h1>
         </div>
-        <Pill kind="green">DÍA {mainStreak}</Pill>
+        <div className="flex items-center gap-2">
+          <Link href="/settings/habits"
+            className="mono text-[11px] px-3 py-1.5 rounded-[8px] border"
+            style={{color:"var(--color-fg-3)", borderColor:"var(--color-hair)"}}>
+            Gestionar →
+          </Link>
+          <Pill kind="green">DÍA {mainStreak}</Pill>
+        </div>
       </header>
 
       {/* ─ Hero racha ──────────────────────────────────────── */}
