@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Full bleed background (maskable — logo inside 80% safe zone = 204px inset from center) -->
+  <rect width="512" height="512" fill="#0f1113"/>
+  <!-- Safe zone content (scaled down ~20% relative to standard icon) -->
+  <rect x="164" y="143" width="30" height="205" rx="6" fill="#6ee77a"/>
+  <rect x="194" y="143" width="85" height="27" rx="5" fill="#6ee77a"/>
+  <rect x="194" y="244" width="85" height="27" rx="5" fill="#6ee77a"/>
+  <rect x="194" y="342" width="85" height="27" rx="5" fill="#6ee77a"/>
+  <path d="M279 143 Q332 143 332 196 Q332 248 279 262 Q332 262 332 318 Q332 369 279 369" fill="none" stroke="#6ee77a" stroke-width="27" stroke-linecap="round"/>
+</svg>

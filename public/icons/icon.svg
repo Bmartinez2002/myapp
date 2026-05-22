@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#0f1113"/>
+  <circle cx="256" cy="256" r="195" fill="none" stroke="#6ee77a" stroke-width="3" opacity="0.25"/>
+  <!-- B letterform using rectangles + arc -->
+  <rect x="148" y="128" width="38" height="256" rx="8" fill="#6ee77a"/>
+  <rect x="186" y="128" width="106" height="34" rx="7" fill="#6ee77a"/>
+  <rect x="186" y="239" width="106" height="34" rx="7" fill="#6ee77a"/>
+  <rect x="186" y="350" width="106" height="34" rx="7" fill="#6ee77a"/>
+  <path d="M292 128 Q364 128 364 196 Q364 256 292 273 Q364 273 364 345 Q364 384 292 384" fill="none" stroke="#6ee77a" stroke-width="34" stroke-linecap="round"/>
+  <!-- OS label -->
+  <text x="390" y="500" font-family="monospace" font-size="44" fill="#3a6645" text-anchor="end" letter-spacing="4">OS</text>
+</svg>
