@@ -11,11 +11,11 @@ import { saveCapture } from "@/app/actions/capture";
 
 type Cat = { id: string; slug: string; name: string; emoji: string | null; kind: string; risk_tier: string | null };
 
-export function CaptureSheet({ categories }: { categories: Cat[] }) {
+export function CaptureSheet({ categories, defaultKind = "expense" }: { categories: Cat[]; defaultKind?: "expense" | "income" }) {
   const router = useRouter();
   const [pending, start] = useTransition();
   const [step, setStep]       = useState<1 | 2 | 3>(1);
-  const [kind, setKind]       = useState<"expense" | "income">("expense");
+  const [kind, setKind]       = useState<"expense" | "income">(defaultKind);
   const [amountStr, setAmountStr] = useState("");
   const [merchant, setMerchant]   = useState("");
   const [catId, setCatId]     = useState<string | null>(null);

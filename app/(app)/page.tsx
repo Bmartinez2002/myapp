@@ -18,12 +18,14 @@ type Ev = {
 type Debt = { id: string; name: string; total_cents: number; due_at: string | null };
 type Habit = { id: string; name: string; emoji: string | null; anti_fuga: boolean };
 type HabitHit = { habit_id: string; hit_date: string };
+type IncomeEv = { id: string; occurred_at: string; amount_cents: number; merchant: string | null };
 
 export default async function HomePage() {
   const sb = await supabaseServer();
   const today = startOfLocalDay();
   const todayKey = localDay();
   const yearAgo = addDays(today, -365).toISOString();
+  const monthStart = new Date(today.getFullYear(), today.getMonth(), 1).toISOString();
 
   const [
     { data: profile },
@@ -34,6 +36,7 @@ export default async function HomePage() {
     { data: hits },
     { data: debts },
     { data: todayEvRaw },
+    { data: incomeEvRaw },
   ] = await Promise.all([
     sb.from("profiles").select("full_name, daily_limit_cents, meta_target_cents").maybeSingle(),
     sb.from("daily_snapshots").select("*").eq("on_date", todayKey).maybeSingle(),
@@ -61,13 +64,21 @@ export default async function HomePage() {
       .order("occurred_at", { ascending: false })
       .limit(4)
       .returns<Ev[]>(),
+    sb.from("money_events")
+      .select("id, occurred_at, amount_cents, merchant")
+      .eq("kind", "income")
+      .gte("occurred_at", monthStart)
+      .order("occurred_at", { ascending: false })
+      .returns<IncomeEv[]>(),
   ]);
 
-  const stability = snap?.stability ?? 72;
+  // ─ Stability (null when no snapshot)
+  const hasSnap = !!snap;
+  const stability = snap?.stability ?? null;
   const pillars = {
-    capital:    snap?.pillar_capital    ?? 84,
-    discipline: snap?.pillar_discipline ?? 70,
-    antifuga:   snap?.pillar_antifuga   ?? 62,
+    capital:    snap?.pillar_capital    ?? null,
+    discipline: snap?.pillar_discipline ?? null,
+    antifuga:   snap?.pillar_antifuga   ?? null,
   };
 
   // ─ 7-day momentum sparkline
@@ -88,10 +99,23 @@ export default async function HomePage() {
   const saved = allEvs.reduce((s,e) =>
     s + (e.kind === "income" ? Number(e.amount_cents) : e.kind === "expense" ? -Number(e.amount_cents) : 0), 0
   );
-  const target = Number(profile?.meta_target_cents ?? 200000000000);
+  const target = Number(profile?.meta_target_cents ?? 2_000_000_000);
   const metaPct = Math.max(0, Math.min(100, (saved / target) * 100));
 
-  // ─ "Cero domicilios" streak (main habit)
+  // ─ Income this month
+  const incomeEvs = incomeEvRaw ?? [];
+  const totalIncomeMes = incomeEvs.reduce((s, e) => s + Number(e.amount_cents), 0);
+  // Group by merchant to show sources
+  const bySource = new Map<string, number>();
+  for (const e of incomeEvs) {
+    const k = e.merchant ?? "Sin descripción";
+    bySource.set(k, (bySource.get(k) ?? 0) + Number(e.amount_cents));
+  }
+  const topSources = [...bySource.entries()]
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 3);
+
+  // ─ Main habit + racha
   const mainHabit = (habits ?? []).find(h => h.anti_fuga) ?? (habits ?? [])[0];
   const rachaSnap = snap?.streak_clean_days ?? 0;
 
@@ -109,7 +133,7 @@ export default async function HomePage() {
     if (days < 30) actions.push({
       icon:"wallet", tag:"DEUDA", tagKind: days < 7 ? "amber" : "blue",
       title:`${d.name} · ${fmtCOP(d.total_cents)}`,
-      sub: days <= 0 ? "Vencido" : `Vence en ${days}d`,
+      sub: days <= 0 ? "¡Vencida!" : `Vence en ${days}d`,
       pri: days < 7 ? "P0" : "P1",
       href:"/meta",
     });
@@ -120,6 +144,8 @@ export default async function HomePage() {
     actions.push({ icon:"plus", tag:"CAPTURA", tagKind:"blue",
       title:"Registra tu primer movimiento del día", sub:"Toca el botón verde", pri:"P1", href:"/capture" });
   }
+
+  const monthName = today.toLocaleDateString("es-CO", { month: "long", timeZone: TZ });
 
   return (
     <div className="px-4 md:px-6 py-4 md:py-6 flex flex-col gap-3.5 max-w-2xl mx-auto md:max-w-none">
@@ -139,25 +165,34 @@ export default async function HomePage() {
       {/* ─ Stability Hero ─────────────────────────────────────── */}
       <Card glow>
         <div className="flex justify-between items-start relative overflow-hidden">
-          <div
-            className="absolute pointer-events-none"
+          <div className="absolute pointer-events-none"
             style={{right:-40, top:-40, width:180, height:180,
-              background:'radial-gradient(circle, oklch(.85 .18 150 / .25), transparent 70%)', borderRadius:'50%'}}
-          />
+              background:'radial-gradient(circle, oklch(.85 .18 150 / .25), transparent 70%)', borderRadius:'50%'}}/>
           <div className="relative">
-            <div className="micro">STABILITY INDEX · HOY</div>
-            <div className="flex items-baseline gap-1.5 mt-1.5">
-              <span className="mono font-medium text-[62px] leading-none tracking-tight" style={{color:'var(--color-accent)'}}>{stability}</span>
-              <span className="mono text-[14px] text-fg-4">/100</span>
-            </div>
-            <div className="flex items-center gap-1.5 mt-1.5">
-              <Icon name="trend" size={12} className="text-accent"/>
-              <span className="mono text-[11.5px] text-accent">
-                {allEvs.length === 0 ? "baseline · empieza a registrar" : `${allEvs.length} eventos registrados`}
-              </span>
-            </div>
+            <div className="micro">ÍNDICE DE ESTABILIDAD · HOY</div>
+            {hasSnap ? (
+              <>
+                <div className="flex items-baseline gap-1.5 mt-1.5">
+                  <span className="mono font-medium text-[62px] leading-none tracking-tight" style={{color:'var(--color-accent)'}}>{stability}</span>
+                  <span className="mono text-[14px] text-fg-4">/100</span>
+                </div>
+                <div className="flex items-center gap-1.5 mt-1.5">
+                  <Icon name="trend" size={12} className="text-accent"/>
+                  <span className="mono text-[11.5px] text-accent">{allEvs.length} eventos registrados</span>
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="flex items-baseline gap-1.5 mt-1.5">
+                  <span className="mono font-medium text-[48px] leading-none tracking-tight text-fg-3">—</span>
+                </div>
+                <div className="mono text-[11.5px] text-fg-4 mt-1.5">
+                  Registra gastos e ingresos para calcular tu índice
+                </div>
+              </>
+            )}
           </div>
-          <Ring pct={stability} size={94}/>
+          <Ring pct={stability ?? 0} size={94}/>
         </div>
         <div className="mt-3.5 grid grid-cols-3 gap-2">
           <Pillar lbl="CAPITAL"    v={pillars.capital}/>
@@ -166,11 +201,60 @@ export default async function HomePage() {
         </div>
       </Card>
 
+      {/* ─ Ingresos este mes ──────────────────────────────────── */}
+      <Card>
+        <div className="flex justify-between items-center mb-3">
+          <div>
+            <div className="micro">INGRESOS · {monthName.toUpperCase()}</div>
+            <div className="mono text-[26px] font-medium mt-1 leading-none" style={{color: totalIncomeMes > 0 ? "var(--color-accent)" : "var(--color-fg-3)"}}>
+              {totalIncomeMes > 0 ? fmtCOP(totalIncomeMes) : "—"}
+            </div>
+          </div>
+          <Link href="/capture?kind=income"
+            className="flex items-center gap-1.5 px-4 py-2.5 rounded-[10px] text-[13px] font-semibold"
+            style={{background:"var(--color-accent)", color:"var(--color-bg-0)"}}>
+            <Icon name="plus" size={14} stroke={2.4}/>
+            Ingreso
+          </Link>
+        </div>
+
+        {topSources.length > 0 ? (
+          <div className="flex flex-col">
+            {topSources.map(([src, amt], i) => (
+              <div key={i} className="flex justify-between items-center py-2"
+                style={{borderTop: i ? "1px solid var(--color-hair)" : "none"}}>
+                <div className="flex items-center gap-2">
+                  <span style={{
+                    width:7, height:7, borderRadius:"50%",
+                    background:"var(--color-accent)", display:"inline-block", flexShrink:0,
+                  }}/>
+                  <span className="text-[13px]">{src}</span>
+                </div>
+                <span className="mono text-[13px] font-medium" style={{color:"var(--color-accent)"}}>
+                  {fmtCOP(amt)}
+                </span>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="text-center py-3">
+            <div className="text-[12.5px] text-fg-3">Sin ingresos registrados este mes</div>
+            <div className="mono text-[11px] text-fg-4 mt-1">Toca "+ Ingreso" para registrar tu salario o ingreso extra</div>
+          </div>
+        )}
+
+        {incomeEvs.length > 3 && (
+          <Link href="/today" className="mono text-[10.5px] text-fg-4 mt-2 block text-right">
+            Ver todos ({incomeEvs.length}) →
+          </Link>
+        )}
+      </Card>
+
       {/* ─ Momentum 7D ────────────────────────────────────────── */}
       <Card>
         <div className="flex justify-between items-start mb-2.5">
           <div>
-            <div className="micro">MOMENTUM · 7D</div>
+            <div className="micro">FLUJO NETO · 7 DÍAS</div>
             <div className="mono text-[22px] font-medium mt-1">
               {weeklyDelta >= 0 ? "+" : ""}{fmtCOP(weeklyDelta * 100)}{" "}
               <span className="text-[13px] text-fg-3">{weeklyDelta >= 0 ? "al ahorro" : "al gasto"}</span>
@@ -211,7 +295,7 @@ export default async function HomePage() {
             <div className="mono mt-2 font-medium leading-none" style={{fontSize:32, color: rachaSnap > 0 ? "var(--color-accent)" : "var(--color-fg-3)"}}>
               {rachaSnap}<span className="text-[14px] text-fg-3 ml-1">{rachaSnap === 1 ? "día" : "días"}</span>
             </div>
-            <div className="mono text-[10.5px] text-fg-3 mt-1">{mainHabit?.name ?? "Cero domicilios"}</div>
+            <div className="mono text-[10.5px] text-fg-3 mt-1">{mainHabit?.name ?? "Sin hábitos aún"}</div>
             <div className="flex gap-[3px] mt-2.5">
               {Array.from({length:18}).map((_,i) => (
                 <span key={i} className="flex-1 rounded-[2px]" style={{
@@ -255,11 +339,11 @@ export default async function HomePage() {
         </section>
       )}
 
-      {/* ─ Hoy · preview (últimos 4 mov.) ─────────────────────── */}
+      {/* ─ Últimos movimientos de hoy ─────────────────────────── */}
       {todayEv.length > 0 && (
         <section>
           <div className="flex justify-between items-center pt-2 pb-2.5 px-1">
-            <span className="micro">HOY · {todayEv.length} MOV.</span>
+            <span className="micro">HOY · {todayEv.length} MOVIMIENTO{todayEv.length !== 1 ? "S" : ""}</span>
             <Link href="/today" className="mono text-[10.5px] text-accent-2">Ver todo →</Link>
           </div>
           <div className="flex flex-col gap-1.5">
@@ -271,7 +355,7 @@ export default async function HomePage() {
                   {e.categories?.emoji ?? (e.kind === "income" ? "💼" : "💳")}
                 </div>
                 <div className="flex-1 min-w-0">
-                  <div className="text-[13px] font-medium truncate">{e.merchant ?? e.categories?.name ?? "Sin categoría"}</div>
+                  <div className="text-[13px] font-medium truncate">{e.merchant ?? e.categories?.name ?? "Sin descripción"}</div>
                   <div className="flex items-center gap-1.5 mt-0.5">
                     <span className="mono text-[10px] text-fg-4">{fmtTime(e.occurred_at)}</span>
                     {e.need && <Pill kind={e.need === "impulse" ? "amber" : e.need === "protected" ? "green" : "plain"}>{e.need}</Pill>}
@@ -286,30 +370,38 @@ export default async function HomePage() {
         </section>
       )}
 
-      {/* ─ AI insight estático ────────────────────────────────── */}
+      {/* ─ Perspectiva ────────────────────────────────────────── */}
       <Card>
         <div className="flex items-center gap-2 mb-2">
           <Icon name="ai" size={14} className="text-accent"/>
-          <span className="micro text-accent">AI OPERATOR · INSIGHT</span>
+          <span className="micro text-accent">PERSPECTIVA DEL DÍA</span>
         </div>
         <p className="text-[13.5px] leading-relaxed text-fg-2">
           {allEvs.length === 0
-            ? "Registra tu primer movimiento para que el operador genere insights con tus datos reales."
+            ? "Registra tu primer movimiento para que el sistema genere perspectivas con tus datos reales."
             : weeklyDelta > 0
               ? <>Si mantienes el ritmo, ahorras <strong style={{color:"var(--color-accent)"}}>{fmtCOP(weeklyDelta * 100 * 4)}</strong> en 4 semanas. Recortar 1 fuga te adelanta ~5 días al objetivo.</>
-              : <>Tu ritmo está negativo. Revisa <strong style={{color:"var(--color-warn)"}}>categorías peligrosas</strong> y considera bloqueos esta semana.</>
+              : <>Tu flujo esta semana es negativo. Revisa <strong style={{color:"var(--color-warn)"}}>categorías de riesgo</strong> y considera reducir gastos.</>
           }
         </p>
         <Link href="/operator" className="mt-2.5 flex items-center gap-1.5 text-[12px] font-medium text-fg-3 hover:text-fg">
-          Abrir Operator <Icon name="arrow" size={12}/>
+          Abrir operador <Icon name="arrow" size={12}/>
         </Link>
       </Card>
     </div>
   );
 }
 
-// ─ Pillar con grados ─────────────────────────────────────────
-function Pillar({ lbl, v }: { lbl: string; v: number }) {
+// ─ Pillar con grado o "—" ────────────────────────────────────
+function Pillar({ lbl, v }: { lbl: string; v: number | null }) {
+  if (v === null) {
+    return (
+      <div className="rounded-[10px] p-2.5 border" style={{background:"var(--color-bg-1)", borderColor:"var(--color-hair)"}}>
+        <div className="micro" style={{fontSize:9, letterSpacing:".12em"}}>{lbl}</div>
+        <div className="mono text-[18px] font-medium mt-1 text-fg-4">—</div>
+      </div>
+    );
+  }
   const grade = v >= 90 ? "A+" : v >= 80 ? "A" : v >= 70 ? "A−" : v >= 60 ? "B+" : v >= 50 ? "B" : v >= 40 ? "C+" : v >= 30 ? "C" : "D";
   const col   = v >= 70 ? "var(--color-accent)" : v >= 50 ? "var(--color-warn)" : "var(--color-danger)";
   return (
