@@ -1,4 +1,5 @@
 import { supabaseServer } from "@/lib/supabase/server";
+import { startOfLocalDay, addDays } from "@/lib/dates";
 import { Card } from "@/components/ui/Card";
 import { Bar } from "@/components/ui/Bar";
 import { Pill } from "@/components/ui/Pill";
@@ -24,10 +25,13 @@ const MONTHS = ["ENE","FEB","MAR","ABR","MAY","JUN","JUL","AGO","SEP","OCT","NOV
 
 export default async function MetaPage() {
   const sb = await supabaseServer();
+  const today = startOfLocalDay();
 
   const [{ data: profile }, { data: allEvents }, { data: debtRows }] = await Promise.all([
     sb.from("profiles").select("meta_target_cents").maybeSingle(),
-    sb.from("money_events").select("amount_cents, kind, occurred_at"),
+    sb.from("money_events")
+      .select("amount_cents, kind, occurred_at")
+      .gte("occurred_at", addDays(today, -730).toISOString()),
     sb.from("debts")
       .select("id, name, total_cents, rate_annual, due_at, debt_payments(amount_cents)")
       .is("closed_at", null)

@@ -36,7 +36,7 @@ export default async function HabitsPage() {
     sb.from("habits").select("id, name, emoji, anti_fuga").order("anti_fuga", { ascending: false }),
     sb.from("habit_hits")
       .select("habit_id, hit_date, done")
-      .gte("hit_date", addDays(today, -365).toISOString().slice(0, 10))
+      .gte("hit_date", addDays(today, -60).toISOString().slice(0, 10))
       .eq("done", true),
     sb.from("money_events")
       .select("id")

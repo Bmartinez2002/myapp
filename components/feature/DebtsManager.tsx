@@ -1,5 +1,6 @@
 "use client";
 import { useState, useTransition } from "react";
+import { useRouter } from "next/navigation";
 import { addDebt, updateDebt, closeDebt, reopenDebt, deleteDebt } from "@/app/actions/debts";
 
 type Debt = {
@@ -337,13 +338,11 @@ function AddForm({ onDone }: { onDone: () => void }) {
 
 export function DebtsManager({ initialDebts }: { initialDebts: Debt[] }) {
   const [debts, setDebts] = useState(initialDebts);
+  const router = useRouter();
   const [, start] = useTransition();
 
   function refresh() {
-    start(async () => {
-      // trigger re-render from server via router.refresh or just rely on revalidatePath
-      window.location.reload();
-    });
+    start(() => { router.refresh(); });
   }
 
   const active = debts.filter(d => !d.closed_at);

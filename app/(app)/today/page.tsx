@@ -125,12 +125,12 @@ export default async function TodayPage() {
 
       {/* Summary */}
       <Card>
-        <div className="grid grid-cols-3">
+        <div style={{display:"flex", alignItems:"stretch"}}>
           <SumCell lbl="INGRESOS" v={fmtCOP(income)}           col="var(--color-accent)"/>
-          <div className="border-l" style={{borderColor:'var(--color-hair)'}}/>
+          <div style={{width:1, background:"var(--color-hair)", flexShrink:0}}/>
           <SumCell lbl="EGRESOS"  v={fmtCOP(spent)}/>
-          <div className="border-l" style={{borderColor:'var(--color-hair)'}}/>
-          <SumCell lbl="NETO"     v={(income - spent >= 0 ? "+" : "") + fmtCOP(income - spent)} col="var(--color-accent)"/>
+          <div style={{width:1, background:"var(--color-hair)", flexShrink:0}}/>
+          <SumCell lbl="NETO"     v={(income - spent >= 0 ? "+" : "") + fmtCOP(income - spent)} col={income - spent >= 0 ? "var(--color-accent)" : "var(--color-danger)"}/>
         </div>
       </Card>
     </div>
@@ -139,7 +139,7 @@ export default async function TodayPage() {
 
 function SumCell({ lbl, v, col }: { lbl: string; v: string; col?: string }) {
   return (
-    <div className="px-2 text-center">
+    <div style={{flex:1, padding:"0 8px", textAlign:"center"}}>
       <div className="micro" style={{fontSize:9}}>{lbl}</div>
       <div className="mono text-[14px] font-medium mt-1" style={{color: col ?? 'var(--color-fg)'}}>{v}</div>
     </div>

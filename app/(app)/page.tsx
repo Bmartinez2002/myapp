@@ -23,6 +23,7 @@ export default async function HomePage() {
   const sb = await supabaseServer();
   const today = startOfLocalDay();
   const todayKey = localDay();
+  const yearAgo = addDays(today, -365).toISOString();
 
   const [
     { data: profile },
@@ -38,10 +39,11 @@ export default async function HomePage() {
     sb.from("daily_snapshots").select("*").eq("on_date", todayKey).maybeSingle(),
     sb.from("money_events")
       .select("amount_cents, kind, occurred_at")
-      .eq("user_id", (await sb.auth.getUser()).data.user?.id ?? "")
       .gte("occurred_at", addDays(today, -7).toISOString())
       .order("occurred_at", { ascending: true }),
-    sb.from("money_events").select("amount_cents, kind"),
+    sb.from("money_events")
+      .select("amount_cents, kind")
+      .gte("occurred_at", yearAgo),
     sb.from("habits").select("id, name, emoji, anti_fuga").order("anti_fuga", { ascending: false }),
     sb.from("habit_hits")
       .select("habit_id, hit_date")

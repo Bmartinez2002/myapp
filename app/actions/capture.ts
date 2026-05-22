@@ -60,8 +60,8 @@ export async function saveCapture(input: unknown) {
     }
   }
 
-  // Recompute snapshot so stability updates immediately after capture
-  await recomputeSnapshot(sb, user.id).catch(() => {});
+  // Fire-and-forget: don't block the capture response
+  recomputeSnapshot(sb, user.id).catch(() => {});
   revalidatePath("/");
   revalidatePath("/today");
   revalidatePath("/meta");
