@@ -1,50 +1,47 @@
 import { supabaseServer } from "@/lib/supabase/server";
-import { startOfLocalDay, dayPart, fmtTime, TZ, addDays } from "@/lib/dates";
+import { startOfLocalDay, TZ, addDays } from "@/lib/dates";
 import { fmtCOP } from "@/lib/money";
 import { Card } from "@/components/ui/Card";
-import { Pill } from "@/components/ui/Pill";
 import { Bar } from "@/components/ui/Bar";
 import { Icon } from "@/components/ui/Icon";
+import { EventFeed, type EventRow } from "@/components/feature/EventFeed";
 import Link from "next/link";
 
 export const dynamic = "force-dynamic";
-
-type Ev = {
-  id: string;
-  occurred_at: string;
-  kind: string;
-  amount_cents: number;
-  merchant: string | null;
-  need: string | null;
-  note: string | null;
-  categories: { name: string; emoji: string | null; risk_tier: string | null } | null;
-};
 
 export default async function TodayPage() {
   const sb = await supabaseServer();
   const today = startOfLocalDay();
   const tomorrow = addDays(today, 1);
 
-  const [{ data: events = [] }, { data: profile }] = await Promise.all([
+  const [{ data: eventsRaw }, { data: profile }, { data: catsRaw }] = await Promise.all([
     sb
       .from("money_events")
       .select("id, occurred_at, kind, amount_cents, merchant, need, note, categories(name, emoji, risk_tier)")
       .gte("occurred_at", today.toISOString())
       .lt("occurred_at", tomorrow.toISOString())
       .order("occurred_at", { ascending: false })
-      .returns<Ev[]>(),
+      .returns<EventRow[]>(),
     sb.from("profiles").select("full_name, daily_limit_cents").maybeSingle(),
+    sb.from("categories").select("id, name, emoji, risk_tier").order("name"),
   ]);
 
   const dailyLimit = Number(profile?.daily_limit_cents ?? 3300000);
-  const evs = events ?? [];
+  const evs = eventsRaw ?? [];
+  const cats = (catsRaw ?? []) as { id: string; name: string; emoji: string | null; risk_tier: string | null }[];
   const spent     = evs.filter(e => e.kind === "expense").reduce((s, e) => s + Number(e.amount_cents), 0);
   const income    = evs.filter(e => e.kind === "income").reduce((s, e)  => s + Number(e.amount_cents), 0);
   const protected_ = evs.filter(e => e.kind === "block").reduce((s, e)  => s + Number(e.amount_cents), 0);
   const ratio = Math.min(100, (spent / dailyLimit) * 100);
 
-  const buckets: Record<string, Ev[]> = { morning: [], afternoon: [], night: [] };
-  evs.forEach(e => buckets[dayPart(e.occurred_at)].push(e));
+  // group by time-of-day
+  const buckets: Record<string, EventRow[]> = { morning: [], afternoon: [], night: [] };
+  evs.forEach(e => {
+    const h = new Date(e.occurred_at).toLocaleString("en-US", { hour: "numeric", hour12: false, timeZone: "America/Bogota" });
+    const hour = parseInt(h);
+    const part = hour < 12 ? "morning" : hour < 18 ? "afternoon" : "night";
+    buckets[part].push(e);
+  });
 
   const partLabel: Record<string, string> = {
     morning:   "MAÑANA · 6–12h",
@@ -91,28 +88,9 @@ export default async function TodayPage() {
         <section key={k}>
           <div className="flex justify-between items-center pt-2 pb-1.5 px-1">
             <span className="micro">{partLabel[k]}</span>
+            <span className="mono text-[10px]" style={{color:"var(--color-fg-4)"}}>TAP PARA EDITAR</span>
           </div>
-          <div className="flex flex-col gap-1.5">
-            {buckets[k].map(e => (
-              <div key={e.id} className="flex items-center gap-3 p-3 rounded-card border"
-                style={{background:'oklch(0.18 .007 250 / .5)', borderColor:'var(--color-hair)'}}>
-                <div className="size-9 rounded-[10px] grid place-items-center text-lg shrink-0"
-                  style={{background:'var(--color-bg-2)', border:'1px solid var(--color-hair)'}}>
-                  {e.categories?.emoji ?? (e.kind === "income" ? "💼" : "💳")}
-                </div>
-                <div className="flex-1 min-w-0">
-                  <div className="text-[13px] font-medium truncate">{e.merchant ?? e.categories?.name ?? "Sin categoría"}</div>
-                  <div className="flex items-center gap-1.5 mt-0.5 flex-wrap">
-                    <span className="mono text-[10px] text-fg-4">{fmtTime(e.occurred_at)}</span>
-                    {e.need && <Pill kind={e.need === "impulse" ? "amber" : e.need === "protected" ? "green" : "plain"}>{e.need}</Pill>}
-                  </div>
-                </div>
-                <span className={"mono text-[14px] font-medium whitespace-nowrap " + (e.kind === "income" || e.kind === "block" ? "text-accent" : "")}>
-                  {e.kind === "income" || e.kind === "block" ? "+" : "−"}{fmtCOP(e.amount_cents)}
-                </span>
-              </div>
-            ))}
-          </div>
+          <EventFeed events={buckets[k]} cats={cats}/>
         </section>
       ))}
 
