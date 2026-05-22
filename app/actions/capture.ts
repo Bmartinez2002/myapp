@@ -1,6 +1,8 @@
 "use server";
+import { revalidatePath } from "next/cache";
 import { supabaseServer } from "@/lib/supabase/server";
 import { CaptureInput } from "@/lib/schemas";
+import { recomputeSnapshot } from "@/lib/snapshot";
 
 export async function saveCapture(input: unknown) {
   const parsed = CaptureInput.parse(input);
@@ -57,6 +59,12 @@ export async function saveCapture(input: unknown) {
       }
     }
   }
+
+  // Recompute snapshot so stability updates immediately after capture
+  await recomputeSnapshot(sb, user.id).catch(() => {});
+  revalidatePath("/");
+  revalidatePath("/today");
+  revalidatePath("/meta");
 
   return { ok: true };
 }

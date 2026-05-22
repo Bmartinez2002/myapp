@@ -64,6 +64,25 @@ export default async function SettingsPage() {
         </div>
       </Card>
 
+      {/* Categories */}
+      <Card>
+        <div className="mono" style={{ fontSize: 10.5, letterSpacing: ".12em", color: "var(--color-fg-3)", marginBottom: 10 }}>
+          CATEGORÍAS
+        </div>
+        <Link
+          href="/settings/categories"
+          style={{
+            display: "flex", alignItems: "center", justifyContent: "space-between",
+            padding: "11px 12px", borderRadius: 10, fontSize: 13.5, fontWeight: 500,
+            background: "var(--color-bg-1)", border: "1px solid var(--color-hair)",
+            color: "var(--color-fg)", textDecoration: "none",
+          }}
+        >
+          <span>Gestionar categorías</span>
+          <span style={{ color: "var(--color-fg-4)" }}>→</span>
+        </Link>
+      </Card>
+
       {/* Export */}
       <Card>
         <div className="mono" style={{ fontSize: 10.5, letterSpacing: ".12em", color: "var(--color-fg-3)", marginBottom: 10 }}>
